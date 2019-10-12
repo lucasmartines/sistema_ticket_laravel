@@ -5,7 +5,7 @@
  @section("content")
  <div class="container mt-5">
      <div class="row">
-        <div class="col-10 mx-auto mb-5">
+        <div class="col-10 mx-auto mb-5" >
             <h1 class=" "style="line-height:1">About</h1> <br>
             <p>
                 Olá sou Lucas Martines, criei essa aplicação para estudar o framework laravel.
@@ -22,6 +22,9 @@
             <p>
                 Para a persistência de dados foi utilizado o Sqlite um banco de dados leve e portátil.
             </p>
+            <p>
+                Para o versionamento do código foi utilizado o github.
+            </p>
             <p>Nessa aplicação a rota de criação de um ticket é a rota</p>
             <a href="/contact">/contact</a>
             <p>A rota de listagem de tickets é a rota</p>
@@ -33,6 +36,10 @@
                 Se quiser saber mais conheça o meu portfólio:
             </p>
             <a href="https://lucasmartines.github.io/"> https://lucasmartines.github.io/ </a>
+            <p>
+                Se quiser ver o  <a href="https://github.com/lucasmartines/sistema_ticket_laravel"> código </a>
+                , ou  <a href="https://github.com/lucasmartines"> outros projetos </a>
+            </p>
         </div>
      </div>
  </div>   
