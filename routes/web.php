@@ -19,7 +19,7 @@
  Route::post("/ticket/{slug?}/delete","TicketsController@destroy");
 //modify comments
 Route::post('/comment','CommentsController@newComment');
-Route::post('/comment/{comment_id?}','CommentsController@destroy');
+  Route::post('/comment/{comment_id?}', 'CommentsController@destroy' );
 
  Route::get('/about', 'PagesController@about');
  Route::get('/contact', 'PagesController@create');
