@@ -17,7 +17,11 @@ class TicketsController extends Controller
     }
     public function show($slug){
         $ticket = Ticket::whereSlug($slug)->firstOrFail();
-        return view('tickets.show',compact('ticket'));
+
+        $comments = $ticket->comments()->get();
+        
+
+        return view('tickets.show',compact('ticket','comments'));
     }
     public function edit($slug){
         $ticket = Ticket::whereSlug($slug)->firstOrFail();
@@ -45,6 +49,15 @@ class TicketsController extends Controller
     public function destroy($slug){
         $ticket = Ticket::whereSlug($slug)->firstOrFail();
         $ticket->delete();
+
+        
+        $comments = $ticket->comments()->get();
+
+        foreach( $comments as $comment){
+            $comment->delete();
+        }
+
+
         return redirect( action('TicketsController@index',$ticket->slug) )
             ->with('status','O ticket ' . $slug . ' foi deletado!' );
     }
